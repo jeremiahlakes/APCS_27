@@ -1,4 +1,4 @@
-package pkg;
+ bbbbb bbbbbbpackage pkg;
 import java.util.Scanner;
 import java.util.Random;
 
