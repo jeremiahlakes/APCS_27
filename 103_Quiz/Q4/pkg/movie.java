@@ -1,0 +1,90 @@
+import pkg.*;
+import java.util.Scanner;
+import java.util.Random;
+
+class starter {
+	public static void main(String args[]) {
+		public class movie {
+        	
+			private String Movie;
+            private double rating;
+            private int NumberOfratings;
+            private String Revenue;
+        
+        }
+		// Part 1
+		 mA = new Movie("Avengers", 8.0, 33, 623357910);
+		 mB = new Movie("Forrest Gump", 8.8, 24, 700000000);		// movieName, rating (out of 10), numRatings (how many ratings), revenue
+		 Movie mC = new Movie("Spirited Away", 8.6, 16, 395800000);
+        
+		System.out.println("-----------------------------");
+
+		System.out.println("The movie " + mA.getMovieName());
+		System.out.println("Rating: " + mA.getRating());
+		System.out.println("Number of Ratings: " + mA.getNumberOfRatings());
+		System.out.println("Revenue: " + mA.getRevenue());
+		System.out.println();
+		
+		System.out.println("-----------------------------");
+        
+		// Part 2	---------------------------------------------
+
+		mA.movieToString("Avengers", 8.0, 33, 623357910);
+		mB.movieToString("Forrest Gump", 8.8, 24, 700000000);
+		mC.movieToString("Spirited Away", 8.6, 16, 395800000);
+        System.out.println("The movie " + mB.getMovieName() + " has a revenue of " + mB.revenueToString());
+		System.out.println("Rating: " + mB.getRating());
+		System.out.println("Number of Ratings: " + mB.getNumberOfRatings());
+		System.out.println("Revenue: " + mB.getRevenue());
+		System.out.println();
+		System.out.println("-----------------------------");
+
+
+		// Part 3	---------------------------------------------
+
+		System.out.println(mA.getMovieName() + " had a total revenue of " + mA.getRevenue());
+		System.out.println(mB.getMovieName() + " had a total revenue of " + mB.getRevenue());
+        System.out.println(mC.getMovieName() + " had a total revenue of " + mC.getRevenue());
+		System.out.println("-----------------------------");
+
+
+		// Part 4	---------------------------------------------
+		mA.addRating(9.0);
+		mA.addRating(8.5);
+		mA.movieToString(8.0);
+
+        mB.addRating(7.8);
+        mB.addRating(8.5);
+		mB.movieToString(8.6);
+
+        mC.addRating(10.0);
+        mC.addRating(7.0);
+		mC.movieToString(8.6);
+		System.out.println("-----------------------------");
+
+
+		// Part 5	---------------------------------------------
+
+		if(mA.getRating() > mB.getRating() || mA.getRating() == mB.getRating()){                     // Ignore movies of the same ratings
+			System.out.println(mA.getMovieName() + " is better than " + mB.getMovieName());
+		}
+		else{
+			System.out.println(mB.getMovieName() + " is better than " + mA.getMovieName());
+		}
+        System.out.println();
+		System.out.println("-----------------------------");
+
+        // Part 6	--------------------------------------------- Extra
+
+		System.out.println("The movie " + mA.getMovieName() + " has a revenue of " + mA.revenueToString());
+        System.out.println();
+		System.out.println("-----------------------------");
+
+		// Part 7	--------------------------------------------- Extra
+
+		Movie dupC = mC.pirateMovie();			// Populates dupC with a copy of the movie mC
+		dupC.movieToString();
+		System.out.println("-----------------------------");
+
+	}
+}
